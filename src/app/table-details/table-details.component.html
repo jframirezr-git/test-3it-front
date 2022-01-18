@@ -1,0 +1,25 @@
+<div class="container">
+  <mat-card>
+    <mat-card-title>Todos los resultados</mat-card-title>
+    <mat-card-subtitle>Votos</mat-card-subtitle>
+    <mat-card-content>
+      <table *ngIf="data">
+        <tr>
+          <th>Rock</th>
+          <th>Clásica</th>
+          <th>Pop</th>
+          <th>Jazz</th>
+        </tr>
+        <tr>
+          <td>{{data.rock}}</td>
+          <td>{{data.classic}}</td>
+          <td>{{data.pop}}</td>
+          <td>{{data.jazz}}</td>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" (click)="back()">Regresar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

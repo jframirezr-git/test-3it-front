@@ -1,0 +1,31 @@
+<div class="container">
+  <mat-card>
+    <mat-card-title>¿Cuál es tu estilo de música?</mat-card-title>
+    <mat-card-subtitle>Formulario</mat-card-subtitle>
+    <mat-card-content>
+      <form [formGroup]="form" class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="name">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Música favorita</mat-label>
+          <mat-select formControlName="typeMusic">
+            <mat-option *ngFor="let type of musicTypes" [value]="type.value">
+              {{type.label}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" (click)="summit()">Guardar</button>
+      <button mat-raised-button color="accent" (click)="cleanForm()">Limpiar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+

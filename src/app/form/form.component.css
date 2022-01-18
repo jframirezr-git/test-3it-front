@@ -1,0 +1,12 @@
+.container {
+  margin-top: 5%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.form-group{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
